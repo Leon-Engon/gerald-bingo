@@ -11,10 +11,13 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (list.length != 0) {
-        Atzar = randint(0, 50 - 1)
+        Atzar = randint(1, 50)
         Bingo = list.removeAt(Atzar)
         Llistatnumeros.push(Bingo)
         Mostra = Llistatnumeros.length
+        for (let index = 0; index < 4; index++) {
+            music.playMelody("E D A G C5 C F B ", 1210)
+        }
         basic.showNumber(Bingo)
     }
 })
