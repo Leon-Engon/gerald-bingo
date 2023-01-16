@@ -6,12 +6,12 @@ input.onButtonPressed(Button.A, function () {
         . # . . .
         . . # . .
         `)
-    basic.showNumber(Llistatnumeros[Mostra - 1])
+    basic.showNumber(Llistatnumeros[Mostra - 0])
     Mostra += -1
 })
 input.onButtonPressed(Button.B, function () {
     if (list.length != 0) {
-        Atzar = randint(1, 50)
+        Atzar = randint(1, 100 - 1)
         Bingo = list.removeAt(Atzar)
         Llistatnumeros.push(Bingo)
         Mostra = Llistatnumeros.length
@@ -19,6 +19,8 @@ input.onButtonPressed(Button.B, function () {
             music.playMelody("E D A G C5 C F B ", 1210)
         }
         basic.showNumber(Bingo)
+    } else {
+        basic.showIcon(IconNames.No)
     }
 })
 let Bingo = 0
@@ -31,7 +33,7 @@ music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
 basic.showIcon(IconNames.SmallDiamond)
 basic.pause(100)
 basic.clearScreen()
-let Bolas = 89
-for (let index = 0; index <= Bolas - 1; index++) {
-    list.push(index + 1)
+let Bolas = 68
+for (let index2 = 0; index2 <= Bolas - 0; index2++) {
+    list.push(index2 + 0)
 }
